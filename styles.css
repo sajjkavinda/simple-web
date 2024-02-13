@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffd4e5; /* Pinkish background color */
+}
+
+.container {
+    text-align: center;
+}
+
+.question {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff007f; /* Dark pink color for the question */
+}
+
+.button-container {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #ff007f; /* Dark pink color for buttons */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff005f; /* Lighter pink color on hover */
+}
+
+.popup {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.popup.show {
+    opacity: 1;
+}
+
+.popup button {
+    margin-top: 10px;
+}

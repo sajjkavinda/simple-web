@@ -1,3 +1,10 @@
+const denyMessages = [
+    "Aw, really? Let me try again with more cuteness babiiiiooo. 😊",
+    "Oh no! Are you sure? Think twice babiiii! 😢",
+    "Don't break my heart! Give it another shot Peeaacchhhheess. ❤️",
+    "I can be even more charming! Please reconsider. 😘"
+];
+
 function showMessage(response) {
     const popup = document.getElementById("popup");
     const popupMessage = document.getElementById("popupMessage");
@@ -5,7 +12,8 @@ function showMessage(response) {
     if (response === "accept") {
         popupMessage.innerText = "I knew it! You should press Accept. Happy Valentine's Day!";
     } else if (response === "deny") {
-        popupMessage.innerText = "Aw, really? Let me try again with more cuteness. 😊";
+        const randomMessage = denyMessages[Math.floor(Math.random() * denyMessages.length)];
+        popupMessage.innerText = randomMessage;
     }
 
     popup.style.display = "block";
